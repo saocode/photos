@@ -1,0 +1,2 @@
+serviceClass: main.client.services.UserImageService
+path: CEAB47C5CD8D5B9E021FB4ED851D27E6.gwt.rpc

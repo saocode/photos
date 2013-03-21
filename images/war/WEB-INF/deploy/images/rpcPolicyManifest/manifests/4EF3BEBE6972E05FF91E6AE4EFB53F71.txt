@@ -1,0 +1,2 @@
+serviceClass: main.client.services.LoginService
+path: 69FF96ED207A7DC955FCC3BA12A044D5.gwt.rpc

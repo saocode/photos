@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Images.html</welcome-file>
+  </welcome-file-list>
+
+    <!-- Servlets -->
+  
+  
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+  
+  	<servlet>
+		<servlet-name>userImageServlet</servlet-name>
+		<servlet-class>main.server.UserImageServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>uploadServlet</servlet-name>
+		<servlet-class>main.server.UploadServlet</servlet-class>
+	</servlet>
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>main.server.LoginServiceImpl</servlet-class>
+    </servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>userImageServlet</servlet-name>
+		<url-pattern>/images/images</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	   <servlet-name>uploadServlet</servlet-name>
+	   <url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	   <servlet-name>loginServlet</servlet-name>
+	   <url-pattern>/images/login</url-pattern>
+	</servlet-mapping>
+
+</web-app>
